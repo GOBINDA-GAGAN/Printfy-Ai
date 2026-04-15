@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser"
 import cors from "cors"
 import { HTTP_STATUS } from "./config/http.config";
 import { Env } from "./config/env.config";
+import { errorHandeler } from "./middlewares/errorHandeler";
 
 const app = express();
 
@@ -30,6 +31,7 @@ app.get("/health", (req: Request, res: Response) => {
 });
 
 app.use(errorHandeler)
+
 
 
 app.listen(Env.PORT, async () => {
