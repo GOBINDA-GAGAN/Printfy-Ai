@@ -29,6 +29,7 @@ app.get("/health", (req: Request, res: Response) => {
     });
 });
 
+app.use(errorHandeler)
 
 
 app.listen(Env.PORT, async () => {
