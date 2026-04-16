@@ -19,8 +19,6 @@ app.use(cors({
 
 }))
 
-
-
 app.get("/health", (req: Request, res: Response) => {
     res.status(HTTP_STATUS.OK).json({
         message: "Server is healthy 🚀",
@@ -31,8 +29,6 @@ app.get("/health", (req: Request, res: Response) => {
 });
 
 app.use(errorHandeler)
-
-
 
 app.listen(Env.PORT, async () => {
   try {
